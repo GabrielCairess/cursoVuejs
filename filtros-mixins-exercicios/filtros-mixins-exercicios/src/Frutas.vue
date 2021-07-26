@@ -1,0 +1,18 @@
+<template>
+  <div>
+    <ul>
+      <li v-for="fruta in frutas" :key="fruta">{{ fruta }}</li>
+      <input type="text" v-model="fruta" @keydown.enter="add" />
+    </ul>
+  </div>
+</template>
+
+<script>
+import FrutasMixin from "./frutasMixin";
+export default {
+  mixins: [FrutasMixin],
+};
+</script>
+
+<style>
+</style>
